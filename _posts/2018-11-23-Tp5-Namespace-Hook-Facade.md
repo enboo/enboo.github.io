@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 理解Nginx里的cgi，fastcgi，php-fpm 之间的关系
-description: "通俗理解Nginx里的cgi，fastcgi，php-fpm"
-category: nginx
+title: 理解TP里的命名空间，行为
+description: "namespace，hook"
+category: php
 avatarimg: 
-tags: [nginx, cgi, fastcgi]
+tags: [php, namespace, hook]
 duoshuo: true
 ---
 本来是在研究docker下nginx配置php，后来就思考这玩意到底是咋运转的，捣鼓nginx运行原理，于是打开了知识盲区的海洋。 
@@ -37,6 +37,4 @@ FPM 从接收到处理请求的流程就是这样了，那么 Nginx 又是如何
 我们知道，Nginx 不仅仅是一个 Web 服务器，也是一个功能强大的 Proxy 服务器，除了进行 http 请求的代理，也可以进行许多其他协议请求的代理，  
 包括本文与 fpm 相关的 fastcgi 协议。为了能够使 Nginx 理解 fastcgi 协议，Nginx 提供了 fastcgi 模块来将 http 请求映射为对应的 fastcgi 请求。
 [深入理解PHP之：Nginx 与 FPM 的工作机制](https://zhuanlan.zhihu.com/p/20694204)
-
-是的，看了很多，看山不是山了，最后又是山了：https://segmentfault.com/q/1010000000256516
 
